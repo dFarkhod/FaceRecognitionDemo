@@ -31,19 +31,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniBosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.kameraniOchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yuzlarniAniqlaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtRecognizedFace2 = new System.Windows.Forms.TextBox();
+            this.btnSave2 = new System.Windows.Forms.Button();
+            this.btnSave1 = new System.Windows.Forms.Button();
             this.txtRecognizedFace1 = new System.Windows.Forms.TextBox();
             this.txtRecognizedFace0 = new System.Windows.Forms.TextBox();
-            this.pbDetectedFace2 = new System.Windows.Forms.PictureBox();
             this.pbDetectedFace1 = new System.Windows.Forms.PictureBox();
             this.pbDetectedFace0 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace0)).BeginInit();
             this.SuspendLayout();
@@ -64,55 +61,48 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(851, 24);
-            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // meniBosToolStripMenuItem
             // 
-            this.meniBosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kameraniOchToolStripMenuItem,
-            this.yuzlarniAniqlaToolStripMenuItem});
             this.meniBosToolStripMenuItem.Name = "meniBosToolStripMenuItem";
-            this.meniBosToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
-            this.meniBosToolStripMenuItem.Text = "Meni bos";
-            // 
-            // kameraniOchToolStripMenuItem
-            // 
-            this.kameraniOchToolStripMenuItem.Name = "kameraniOchToolStripMenuItem";
-            this.kameraniOchToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.kameraniOchToolStripMenuItem.Text = "Kamerani och";
-            this.kameraniOchToolStripMenuItem.Click += new System.EventHandler(this.kameraniOchToolStripMenuItem_Click);
-            // 
-            // yuzlarniAniqlaToolStripMenuItem
-            // 
-            this.yuzlarniAniqlaToolStripMenuItem.Name = "yuzlarniAniqlaToolStripMenuItem";
-            this.yuzlarniAniqlaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.yuzlarniAniqlaToolStripMenuItem.Text = "Yuzlarni Aniqla";
-            this.yuzlarniAniqlaToolStripMenuItem.Click += new System.EventHandler(this.yuzlarniAniqlaToolStripMenuItem_Click);
+            this.meniBosToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.meniBosToolStripMenuItem.Text = "Kamerani Och";
+            this.meniBosToolStripMenuItem.Click += new System.EventHandler(this.openCameraToolStripMenuItem_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtRecognizedFace2);
+            this.panel1.Controls.Add(this.btnSave2);
+            this.panel1.Controls.Add(this.btnSave1);
             this.panel1.Controls.Add(this.txtRecognizedFace1);
             this.panel1.Controls.Add(this.txtRecognizedFace0);
-            this.panel1.Controls.Add(this.pbDetectedFace2);
             this.panel1.Controls.Add(this.pbDetectedFace1);
             this.panel1.Controls.Add(this.pbDetectedFace0);
             this.panel1.Location = new System.Drawing.Point(735, 27);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(108, 450);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 1;
             // 
-            // txtRecognizedFace2
+            // btnSave2
             // 
-            this.txtRecognizedFace2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRecognizedFace2.Enabled = false;
-            this.txtRecognizedFace2.Location = new System.Drawing.Point(4, 416);
-            this.txtRecognizedFace2.Name = "txtRecognizedFace2";
-            this.txtRecognizedFace2.ReadOnly = true;
-            this.txtRecognizedFace2.Size = new System.Drawing.Size(100, 13);
-            this.txtRecognizedFace2.TabIndex = 10;
-            this.txtRecognizedFace2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave2.Location = new System.Drawing.Point(5, 282);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(103, 23);
+            this.btnSave2.TabIndex = 1;
+            this.btnSave2.Text = "Yuzni Saqla";
+            this.btnSave2.UseVisualStyleBackColor = true;
+            this.btnSave2.Click += new System.EventHandler(this.btnSave2_Click);
+            // 
+            // btnSave1
+            // 
+            this.btnSave1.Location = new System.Drawing.Point(5, 129);
+            this.btnSave1.Name = "btnSave1";
+            this.btnSave1.Size = new System.Drawing.Size(103, 23);
+            this.btnSave1.TabIndex = 0;
+            this.btnSave1.Text = "Yuzni Saqla";
+            this.btnSave1.UseVisualStyleBackColor = true;
+            this.btnSave1.Click += new System.EventHandler(this.btnSave1_Click);
             // 
             // txtRecognizedFace1
             // 
@@ -135,16 +125,6 @@
             this.txtRecognizedFace0.Size = new System.Drawing.Size(100, 13);
             this.txtRecognizedFace0.TabIndex = 8;
             this.txtRecognizedFace0.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pbDetectedFace2
-            // 
-            this.pbDetectedFace2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbDetectedFace2.Location = new System.Drawing.Point(5, 311);
-            this.pbDetectedFace2.Name = "pbDetectedFace2";
-            this.pbDetectedFace2.Size = new System.Drawing.Size(100, 100);
-            this.pbDetectedFace2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDetectedFace2.TabIndex = 6;
-            this.pbDetectedFace2.TabStop = false;
             // 
             // pbDetectedFace1
             // 
@@ -186,7 +166,6 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDetectedFace0)).EndInit();
             this.ResumeLayout(false);
@@ -199,15 +178,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniBosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem kameraniOchToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pbDetectedFace2;
         private System.Windows.Forms.PictureBox pbDetectedFace1;
         private System.Windows.Forms.PictureBox pbDetectedFace0;
-        private System.Windows.Forms.ToolStripMenuItem yuzlarniAniqlaToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtRecognizedFace2;
         private System.Windows.Forms.TextBox txtRecognizedFace1;
         private System.Windows.Forms.TextBox txtRecognizedFace0;
+        private System.Windows.Forms.Button btnSave2;
+        private System.Windows.Forms.Button btnSave1;
     }
 }
 
